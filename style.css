@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Sansation-Light;
+    src: url('./fonts/Sansation-Light.ttf');
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Sansation-Light;
+}
+:root{
+    --titleColor: #C09764;
+    --light: #E7D3B9;
+    --bgDark: #A18868;
+    --orange: #FEBB69;
+}
+html{
+    height: 100vh;
+    
+}
+body{
+    background: radial-gradient(59.14% 186.91% at 50% 50%, #313234 0%, #3A3B3D 38.54%, #87888A 100%);
+    height: 100%;
+}
+#particles-js{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    /* top:0; */
+}
+.grid{
+    display: grid;
+
+    /* background-color: wheat; */
+}
+.titlePage{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3em;
+}
+.title{
+    margin-top: 2em;
+    grid-column: 2/3;
+    grid-row: 1;
+    color: var(--titleColor);   
+    font-size: 2.5em; 
+}
+ul{
+    list-style-type: none; 
+}
+.cuprins{
+    grid-column: 2/3;
+    grid-row: 2;
+    color: var(--light);
+    font-size: 1.8em;
+}
+.startBtn{
+    grid-column: 2/3;
+    grid-row: 3;
+    align-self: center;
+    margin-top: 1em;
+
+}
+.startBtn button{
+    font-size: 2em;
+    padding: 0.2em 1em;
+    background-color: var(--bgDark);
+    border: 0;
+}
+.startBtn button:focus{
+    outline: none;
+}
+.startBtn button:hover{
+    background-color: #ccb18d;
+
+}
+.echipa{
+    grid-row: 4;
+    grid-column: 1/4;
+    align-self: center;
+    margin-top: 4em;
+}
+.echipa h3{
+    color: var(--light);
+    font-size: 1.8em;
+}
+.line{
+    background-color: var(--orange);
+    width: 100%;
+    height: 1px;
+}
+#echipaTitle{
+    grid-template-columns: 5fr 1fr 5fr;
+    align-items: center;
+}
+.echipa ul{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.echipa ul li{
+    display: inline-block;
+    font-size: 1.4em;
+    color: var(--orange);
+}
+
+
+.text-center{
+    text-align: center  !important;
+}
