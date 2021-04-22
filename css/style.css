@@ -1,6 +1,6 @@
 @font-face {
     font-family: Sansation-Light;
-    src: url('./fonts/Sansation-Light.ttf');
+    src: url('/fonts/Sansation-Light.ttf');
 }
 *{
     padding: 0;
@@ -60,18 +60,18 @@ ul{
     margin-top: 1em;
 
 }
-.startBtn button{
+.btn{
     font-size: 2em;
     padding: 0.2em 1em;
     background-color: var(--bgDark);
     border: 0;
 }
-.startBtn button:focus{
+.btn:focus{
     outline: none;
 }
-.startBtn button:hover{
+.btn:hover{
     background-color: #ccb18d;
-
+    cursor: pointer;
 }
 .echipa{
     grid-row: 4;
@@ -88,6 +88,11 @@ ul{
     width: 100%;
     height: 1px;
 }
+.verticalLine{
+    background-color: var(--orange);
+    width: 1px;
+    height: 100%;
+}
 #echipaTitle{
     grid-template-columns: 5fr 1fr 5fr;
     align-items: center;
@@ -103,8 +108,62 @@ ul{
     font-size: 1.4em;
     color: var(--orange);
 }
-
-
 .text-center{
     text-align: center  !important;
+}
+
+/* Introducere */
+.introducere{
+    grid-template-columns: 1fr 5fr 2fr;
+}
+.introducere .title{
+    grid-row: 1;
+    margin-bottom: 1em;
+}
+#firstP{
+    grid-row: 2;
+}
+.lineAndContent{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    height: 7em;
+
+}
+.lineAndContent .content{
+    color: var(--light);
+    font-style: italic;
+    align-self: center;
+    font-size: 1.1em;
+}
+.lineAndContent .lineAndIcon{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffa332
+}
+#secondP{
+    grid-row:3;
+}
+#thirdP{
+    grid-row:4;
+}
+.buttons{
+    grid-row: 5;
+    grid-column: 1/4;
+    padding: 3em;
+    padding-bottom: 0;
+    display: flex;
+}
+.ml-auto{
+    margin-left: auto;
+    margin-right: 0;
+}
+.introducere .image{
+    grid-row: 2/5;
+    grid-column: 3/4;
+    align-self: center;
+    justify-self: end;
 }
