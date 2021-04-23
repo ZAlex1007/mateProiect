@@ -33,15 +33,16 @@ body{
 }
 .grid{
     display: grid;
-
     /* background-color: wheat; */
 }
+
+/* First page */
 .titlePage{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3em;
 }
 .title{
-    margin-top: 2em;
+    margin-top: 1.5em;
     grid-column: 2/3;
     grid-row: 1;
     color: var(--titleColor);   
@@ -239,3 +240,133 @@ ul{
     align-self: end;
     grid-column: 1/6;
 }
+
+
+
+/* Animatii */
+.opacityAnim{
+    --delay: 0s;
+    opacity: 0;
+    animation: opacityAnim 1s linear forwards;
+    animation-delay: var(--delay);
+}
+.horizontalAnim{
+    --delay: 0s;
+    --time: 3s;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: horizontalAnim var(--time) linear forwards;
+    animation-delay: var(--delay);
+}
+.verticalAnim{
+    --delay: 0s;
+    --time: 3s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    animation: verticalAnim var(--time) linear forwards;
+    animation-delay: var(--delay);
+}
+.verticalAnimRev{
+    --delay: 0s;
+    --time: 3s;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    animation: verticalAnimRev var(--time) linear  forwards;
+    animation-delay: var(--delay);
+}
+.circleAnim{
+    --delay: 0s;
+    --time: 3s;
+    clip-path: circle(0% at 50% 50%);
+    animation: circleAnim var(--time) linear forwards;
+    animation-delay: var(--delay);
+}
+
+
+@keyframes opacityAnim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes horizontalAnim{
+    0%{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes verticalAnim{
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes verticalAnimRev{
+    0%{
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    100%{
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+}
+@keyframes circleAnim{
+    0%{
+        clip-path: circle(0% at 50% 50%);
+    }
+    100%{
+        clip-path: circle(70.7% at 50% 50%);
+    }
+}
+/* Statistici */
+.statistici{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.statistici .title{
+    margin-bottom: 1em;
+    grid-row: 1;
+    grid-column: 1/4;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Exemple */
+.exemple{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.exemple .title{
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 1em;
+}
+.exemplu{
+    grid-column: 1/4;
+    align-self: center;
+    justify-self: center;
+    width: 60%;
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    background: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), transparent 1px, rgba(0, 0, 0, 0.3) 2px);
+    background-size: 3px 3px;
+    background-color: #302f34;
+    padding: 0.5 1em;
+    margin-bottom: 1em;
+}
+.exemplu p{
+    padding: 1em;
+}
+#exemplu1{
+    grid-row: 2;
+}
+/* #exemplu1 p{
+    padding-right: 0;
+} */
+#exemplu2{
+    grid-row: 3;
+}
+/* #exemplu2 p{
+    padding-left: 0;
+} */
