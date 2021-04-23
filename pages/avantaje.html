@@ -9,14 +9,46 @@
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <title>E-commerce</title>
 </head>
-<body>
-    <div class="card-carousel">
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
+<body class="no-overflow">
+    <div class="grid avantaje">
+        <div class="title">
+            <h2>Avantaje</h2>
+        </div>
+        <div class="card-carousel">
+            <div class="my-card ">
+                <h3>Pentru companii</h3>
+                <ul class="text-center">
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Asd</li>
+                    <li>Asd</li>
+                </ul>
+            </div>
+            <div class="my-card">
+                <h3>Pentru consumatori</h3>
+                <ul class="text-center">
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Asd</li>
+                    <li>Asd</li>
+                </ul>
+            </div>
+            <div class="my-card ">
+                <h3>Pentru societati</h3>
+                <ul class="text-center">
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Asd</li>
+                    <li>Asd</li>
+                </ul>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="nextPage('pages/introducere.html')" class="btn">PREV</button>
+            <button onclick="nextPage('pages/metode.html')" class="btn ml-auto">NEXT</button>
+        </div>
     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
     <script src='/js/carousel.js'></script>
+    <script src="/js/functions.js"></script>
 </body>
 </html>
