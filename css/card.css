@@ -51,7 +51,9 @@ a:hover {
 .cardR.flipped {
   transform: translateX(-100%) rotateY(-180deg);
 }
-
+.layer{
+  align-items: center;
+}
 .card-front,
 .card-back {
   -webkit-backface-visibility: hidden;
@@ -74,9 +76,9 @@ a:hover {
   transform: rotateY(180deg);
 }
 .card-back .layer {
-  background: repeating-linear-gradient(135deg, rgba(76, 71, 31, 0.3), transparent 1px, rgba(76, 71, 31, 0.3) 2px);
+  background: repeating-linear-gradient(135deg, rgba(76, 71, 31, 0.2), transparent 1px, rgba(76, 71, 31, 0.2) 2px);
   background-size: 3px 3px;
-  background-color: #d4cd96;
+  background-color: #fff9cc;
   color: #302f34;
   height: 100%;
   position: relative;
@@ -94,15 +96,15 @@ a:hover {
 }
 .card-back .layer .top,
 .card-back .layer .bottom {
-  left: 8%;
+  padding: 0.7em;
   position: absolute;
   z-index: 1;
 }
 .card-back .layer .top {
-  top: 12%;
+  top: 5%;
 }
 .card-back .layer .bottom {
-  bottom: 12%;
+  bottom: 5%;
 }
 .card-back .layer h2, .card-back .layer h3, .card-back .layer h4 {
   font-weight: 400;

@@ -8,6 +8,7 @@ let ctx = document.getElementById('myChart').getContext('2d');
 let labels=['2015', '2016', '2017', '2018', '2019', '2020'];
 let values=[7.4,8.6,10.2,11.9,13.7,15.5];
 
+Chart.defaults.color="#FFF";
 
 let data={
     labels: labels,

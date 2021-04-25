@@ -34,6 +34,7 @@ body{
 .grid{
     display: grid;
     /* background-color: wheat; */
+    height: 97%;
 }
 
 /* First page */
@@ -69,6 +70,7 @@ ul{
     padding: 0.2em 1em;
     background-color: var(--bgDark);
     border: 0;
+    max-height: 55px;
 }
 .btn:focus{
     outline: none;
@@ -87,6 +89,7 @@ ul{
     color: var(--light);
     font-size: 1.8em;
 }
+
 .line{
     background-color: var(--orange);
     width: 100%;
@@ -127,12 +130,17 @@ ul{
 #firstP{
     grid-row: 2;
 }
+.introducere .main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1/3;
+    height: 21em;
+}
 .lineAndContent{
     grid-column: 1/3;
     display: grid;
     grid-template-columns: 1fr 11fr;
     height: 7em;
-
 }
 .lineAndContent .content{
     color: var(--light);
@@ -197,6 +205,12 @@ ul{
     padding-bottom: 1em;
     text-align: center;
 }
+.card-carousel .my-card li{
+    margin-bottom: 0.3em;
+}
+.card-carousel .my-card li:nth-child(odd) {
+    color: #e7dd90;
+  }
 /* Metode de plata */
 .metode{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -361,12 +375,54 @@ ul{
 #exemplu1{
     grid-row: 2;
 }
-/* #exemplu1 p{
-    padding-right: 0;
-} */
 #exemplu2{
     grid-row: 3;
 }
-/* #exemplu2 p{
-    padding-left: 0;
-} */
+.highlight{
+    color: rgb(0, 64, 138);
+    font-weight: bold;
+}
+.highlightL{
+    color: rgb(62, 143, 235);
+    font-weight: bold;
+}
+
+
+@media only screen  and (min-width: 1680px){
+    .lineAndContent{
+        height: 9em;
+        font-size: 22px;
+    }
+    .introducere .image img{
+        width: 450px;
+    }
+    :root{
+        font-size: 23.5px;
+    }
+    
+    .btn{
+        max-height: 70px;
+
+    }
+    .card{
+        width: 430px;
+        height: 280px;
+    }
+    #card1{
+        grid-column: 1/4;
+    }
+    #card2{
+        grid-column: 3/6;
+
+    }
+    #card3{
+        grid-column: 1/4;
+    }
+    #card4{
+        grid-column: 3/6;
+    }
+    .cardR{
+        margin-left: -100px;
+
+    }
+}
